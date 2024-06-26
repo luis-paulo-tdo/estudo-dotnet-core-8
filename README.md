@@ -47,6 +47,15 @@ Seção #1: Conceitos Gerais
 			4) Desenvolvidos em tempo reduzido;
 			5) Apresentam maior segurança.
 	=> API x Web Service
+		-> APIs:
+			- Não são necessariamente Web Services;
+			- Usam qualquer meio de comunicação;
+			- São de código aberto;
+			- São utilizadas de qualquer lugar;
+			- Realizam todas as operações de um Web Service;
+			- Podem ter arquitetura leve para bandas curtas;
+			- Não necessita de uma rede para funcionar;
+			- Tendem a serem abertas para qualquer um.
 		-> Web Services:
 			- São APIs;
 			- Usam apenas três meios de comunicação: SOAP, REST e XML-RPC;
@@ -57,15 +66,6 @@ Seção #1: Conceitos Gerais
 			- Não têm arquitetura leve;
 			- Necessita de uma rede para seu funcionamento;
 			- Tendem a oferecer funcionalidades para usuários específicos.
-		-> APIs:
-			- Não são necessariamente Web Services;
-			- Usam qualquer meio de comunicação;
-			- São de código aberto;
-			- São utilizadas de qualquer lugar;
-			- Realizam todas as operações de um Web Service;
-			- Podem ter arquitetura leve para bandas curtas;
-			- Não necessita de uma rede para funcionar;
-			- Tendem a serem abertas para qualquer um.
 	=> Web API: A evolução dos Web Services
 		-> Conjunto de serviços na Web para integrar diversos clientes;
 		-> Características:
@@ -75,3 +75,58 @@ Seção #1: Conceitos Gerais
 			4) Podem responder com multimídia.
 		-> Exemplos: Google APIs, Instagram, Twitter, YouTube;
 		-> Podem ser implementadas com SOAP ou seguindo o REST.
+		
+1.3. Conceitos: SOAP, REST, ASP.NET Core Web API
+	=> SOAP: Simple Object Access Protocol
+		-> Protocolo mantido pela W3C baseado em XML;
+		-> Usado para trocar informações entre aplicações;
+		-> As aplicações podem ser do mesmo ou de sistemas diferentes;
+		-> Características:
+			- Todas as mensagens seguem o mesmo formato;
+			- É independente de protocolo e devem retornar XML;
+			- Os retornos das requisições não podem ser postos em cache.
+	=> REST: Representational State Transfer Protocol
+		-> Estilo arquitetural sem estado;
+		-> Conjunto coordenado de restrições arquiteturais;
+		-> Aplicado a componentes, conectores e elementos de sistemas;
+		-> Opera sobre dentro de sistemas de hipermídia distribuídos;
+		-> São princípios que atendem a necessidade de performance;
+		-> Características:
+			- Cada entidade é vista como um recurso acessível;
+			- O acesso a estes recursos é via interface;
+			- A comunicação é feita via Protocolo HTTP;
+			- Métodos GET, POST, PUT e DELETE.
+		-> Pode usar outros Protocolos no lugar do HTTP.
+	=> SOAP x REST:
+		-> SOAP:
+			- É um protocolo de comunicação entre cliente e provedor;
+			- Usa a linguagem WSDL (Web Services Description Language);
+			- Geralmente, precisa de mais largura de banda para seu uso;
+			- Trabalha praticamente com o formato XML para se comunicar;
+			- É independente de protocolo (HTTP, SMTP, TCP, IMS, etc.);
+			- Invoca os serviços usando Remote Procedure Call.
+		-> REST:
+			- É um estilo arquitetural;
+			- Usa JSON e XML para trocar dados;
+			- Não necessita de tanta largura de banda;
+			- Trabalha com diferentes formatos de resposta;
+			- Verbos GET, POST, PUT e DELETE para acessar serviços;
+			- Invoca os serviços através de uma URI.
+	=> ASP.NET Core
+		-> Framework da Microsoft para criar Web APIs:
+		-> As Web APIs criadas são aderentes ao estilo REST;
+		-> Permite a criação de seus serviços com a linguagem C#;
+		-> Utiliza Controladores para tratar as solicitações;
+		-> Podem usar as Minimal APIs para tratar as solicitações;
+		-> As APIs podem ser criadas em um único arquivo para leveza.
+	=> API RESTful
+		-> APIs quesão aderentes ao estilo arquitetural REST:
+			- Possui arquitetura Cliente-Servidor;
+			- Não possuir estado;
+			- Ter uma interface uniforme.
+	=> ASP.NET Core Web API
+		-> Web APIs RESTful criadas na Plataforma .NET Core;
+		-> Construídas para sistemas Windows, Linux e MacOS;
+		-> Montadas com as IDEs Visual Studio 2022/Code e NET CLI;
+		-> Utilizando verbos HTTP GET, POST, PUT e DELETE para CRUD;
+		-> As Web APIs RESTful criadas são robustas e de alto desempenho.
