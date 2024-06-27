@@ -130,3 +130,38 @@ Seção #1: Conceitos Gerais
 		-> Montadas com as IDEs Visual Studio 2022/Code e NET CLI;
 		-> Utilizando verbos HTTP GET, POST, PUT e DELETE para CRUD;
 		-> As Web APIs RESTful criadas são robustas e de alto desempenho.
+
+1.4. REST
+	=> É um estilo arquitetural para a concepção de sistemas distribuídos;
+	=> Não é um padrão ou tecnologia, mas sim um conjunto de regras e restrições;
+	=> Principais restrições:
+		-> Ter um relacionamento cliente/servidor;
+		-> Não possuir monitoração de status;
+		-> Possuir uma interface que seja uniforme:
+			- Representações URI (Uniform Resource Identifiers);
+			- Mensagens que sejam auto-descritivas;
+			- Hipermídia (hiperlinks e hipertexto).
+		-> Suportar o cache de dados e respostas;
+		-> Suportar um sistema em camadas.
+	=> Arquitetura Cliente/Servidor:
+		-> Recurso: Abstrai por meio da URI o que uma API dispõe;
+		-> Representação: É a resposta obtida através do Recurso;
+		-> Stateless: A comunicação sempre contém os dados necessários;
+		-> Mensagens: Autodescritivas, por meio dos verbos GET, POST, etc.
+	=> Uma API RESTful adere ao REST;
+	=> Os recursos são definidos na criação:
+		-> Todos os livros cadastrados;
+		-> Um livro cadastrado;
+		-> Todos os livros de um autor.
+	=> Os recursos definidos são mapeados via URI:
+		-> api/biblioteca/livros
+		-> api/biblioteca/livros/1
+		-> api/biblioteca/autor/1/livros
+	=> Recursos são requisitados via verbos HTTP;
+	=> As requisições são respondidas com um código status;
+	=> Com o status de uma operação, é possível saber o seu sucesso:
+		-> 1XX para códigos informativos;
+		-> 2XX para códigos de sucesso;
+		-> 3XX para redirecionamento;
+		-> 4XX para erros do cliente;
+		-> 5XX para erros no servidor.
