@@ -165,3 +165,22 @@ Seção #1: Conceitos Gerais
 		-> 3XX para redirecionamento;
 		-> 4XX para erros do cliente;
 		-> 5XX para erros no servidor.
+
+1.5. HTTP
+	=> O Protocolo HTTP é usado na comunicação entre os Clientes e as Web APIs;
+	=> O Cliente abre um Web Socket e envia requisições que serão respondidas;
+	=> As requisições servem para acessar e manipular os recursos da Web API;
+	=> As requisições são enviadas via Uniform Resource Identifier (URI);
+	=> Uma requisição HTTP é dividida em três partes que distintas:
+		-> Request Line: Método HTTP + URI + Protocolo HTTP;
+			- Método: Ação;
+			- URI: Recurso;
+			- Protocolo: Versão.
+		-> Headers: Metadados contendo informações;
+			- Host, Cache-Control, Accept, Authorization.
+		-> Body: Informação adicional e opcional enviada:
+			- Texto, HTML, JSON, etc.
+	=> Uma resposta HTTP também é dividida em três partes:
+		-> Status Line: O código do status da requisição;
+		-> Headers: Metadados contendo informações;
+		-> Body: Dados opcionais enviados pelo servidor.
