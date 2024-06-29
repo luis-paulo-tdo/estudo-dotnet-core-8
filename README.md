@@ -184,3 +184,22 @@ Seção #1: Conceitos Gerais
 		-> Status Line: O código do status da requisição;
 		-> Headers: Metadados contendo informações;
 		-> Body: Dados opcionais enviados pelo servidor.
+		
+1.6. Métodos HTTP
+	=> Usados para consumir os recursos de uma Web API RESTful;
+	=> GET: Usado para recuperar informações inerentes ao recurso:
+		-> É um método seguro, pois não altera o estado do recurso;
+		-> É idempotente, produzindo o mesmo resultado se repetido;
+		-> Possíveis códigos de retorno: 200 OK, 404 NOT FOUND.
+	=> POST: Usado para criar um novo recurso contendo suas informações:
+		-> Não é um método seguro, pois altera o estado do recurso;
+		-> Não é idempotente, não produzindo o mesmo resultado se repetido;
+		-> Possíveis retornos: 201 CREATED, 400 BAD REQUEST.
+	=> PUT: Usado par atualizar uma informação e atualizar o recurso:
+		-> Não é um método seguro, pois altera o estado do recurso;
+		-> É idempotente, não produzindo o mesmo resultado se repetido;
+		-> Possíveis retornos: 200 OK ou 204 NO CONTENT, 404 NOT FOUND.
+	=> DELETE: Usado para uma informação e excluir o recurso referido;
+		-> Não é um método seguro, pois altera o estado do recurso;
+		-> É idempotente, produzindo o mesmo resultado de repetido;
+		-> Possíveis retornos: 200 OK, 404 NOT FOUND.
