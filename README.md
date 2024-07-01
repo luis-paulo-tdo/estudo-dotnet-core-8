@@ -203,3 +203,19 @@ Seção #1: Conceitos Gerais
 		-> Não é um método seguro, pois altera o estado do recurso;
 		-> É idempotente, produzindo o mesmo resultado de repetido;
 		-> Possíveis retornos: 200 OK, 404 NOT FOUND.
+
+1.7. HTTPS e HSTS
+	=> HyperText Transfer Protocol Secure é uma extensão segura do HTTP;
+	=> É implementado sobre a Transport Layer Security, uma camada segura:
+		-> É um protocolo que substitui o Protocolo SSL - Secure Sockets Layer;
+		-> Permite a comunicação criptografada entre um site e um navegador;
+	=> Os sites que configurarem o certificado TLS podem usar o HTTPS;
+	=> Seu objetivo é tornar segura a tranmissão de informações sensíves:
+		-> Dados pessoais, dados de pagamento e logins de entrada.
+	=> O uso do HTTPS pode ser definido no projeto .NET Core via Middlewares:
+		-> O método UseHttpsRedirection redireciona as requisições HTTP para HTTPS.
+	=> A API pode orientar os navegadores a utilizarem o HTTPS para acessá-las:
+		-> O método UseHsts envia a instrução no Header com a chave Strict-Transport-Security.
+	=> Em aplicações MVC, o atributo RequireHttps é usado, mas não deve ser usado em Web APIs:
+		-> Ele é usado para redirecionar HTTP para HTTPS, mas não protege a informação enviada.
+	=> As Web APIs seguras rejeitam requisições HTTP, utilizando somente HTTPS.
