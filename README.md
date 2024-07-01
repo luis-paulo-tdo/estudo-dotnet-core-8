@@ -219,3 +219,45 @@ Seção #1: Conceitos Gerais
 	=> Em aplicações MVC, o atributo RequireHttps é usado, mas não deve ser usado em Web APIs:
 		-> Ele é usado para redirecionar HTTP para HTTPS, mas não protege a informação enviada.
 	=> As Web APIs seguras rejeitam requisições HTTP, utilizando somente HTTPS.
+
+1.8. JSON (JavaScript Object Notation)
+	=> É um formato de troca de dados simples e rápida entre sistemas;
+	=> É compacto, leve, legível e de pradrão aberto independente;
+	=> A utilização de seu formato se baseia em chave-valor;
+	=> O seu formato lembra muito o formato em XML:
+		-> É hierárquico: Valores dentro de valores;
+		-> Pode ser analisado pelo JavaScript;
+		-> É auto-descritivo e legível;
+		-> É texto em formato simples.
+	=> Mas ele é diferente do XML:
+		-> Não usa tag de fechamento;
+		-> É mais curto e simples;
+		-> Leitura e escrita rápidas;
+		-> Faz o uso de arrays;
+		-> Não tem palavras reservadas;
+		-> Possuem parsers nas principais linguagens.
+	=> Possui suas prórias regras de sintaxe:
+		-> É definido por pares Chave:Valor;
+		-> Dados separados por vírgulas;
+		-> As chaves contém objetos;
+		-> Os colchetes expressam arrays.
+	=> Valores que podem ser usados:
+		-> Números inteiros ou pontos flutuantes;
+		-> Strings, booleanos, arrays, objetos e nulo.
+	=> Em suma, é o formato mais utilizado pelas Web APIs;
+	=> Ferramentas para trabalhar com a notação JSON:
+		-> JSON Editor Online: Permite editar e validar JSONs;
+		-> JSON 2 Csharp: Obter uma classe C# a partir de um JSON.
+	=> Utilizando a notação JSON dentro das Web APIs ASP .NET Core:
+		-> Com a classe HttpClient, são enviadas as requisições HTTP;
+		-> A classe interage com os recuros através dos métodos HTTP;
+		-> Principais métodos: GetAsync, PostAsync, PutAsync e DeleteAsync;
+		-> Eles armazenam em buffer as respostas do servidor antes de retorná-las;
+		-> Dentro destas respostas, todo o corpo da resposta é lido pela aplicação;
+		-> Os métodos são thread safe, não gerando assim problemas de concorrência;
+		-> A HttpClient tem métodos de extensão para receber e enviar JSON;
+		-> Principais métodos: GetFromJsonAsync, PostAsJsonAsync, PutAsJsonAsync;
+		-> O código fica mais legível tendo com operações usando JSON;
+	=> A .NET Core contém classes para serialização de JSON:
+		-> Elas convertem objetos em strings representando JSON;
+		-> Elas também desserializam JSON em objetos C#;
