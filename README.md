@@ -260,4 +260,28 @@ Seção #1: Conceitos Gerais
 		-> O código fica mais legível tendo com operações usando JSON;
 	=> A .NET Core contém classes para serialização de JSON:
 		-> Elas convertem objetos em strings representando JSON;
-		-> Elas também desserializam JSON em objetos C#;
+		-> Elas também desserializam JSON em objetos C#.
+
+1.9. Níveis de Maturidade de Richardson
+	=> O REST para o acesso e a manipulação de dados remotos;
+	=> As Web APIs RESTful são consideradas mais maduras;
+		-> Oferecem facilidade, flexibilidade e ineroperabilidade.
+	=> Os desenvolvedores mais puristas seguem o REST à risca;
+	=> Os pragmáticos ignoram algumas regrase implementam outras;
+	=> O modelo de Richardson ajuda a classificar este nível de maturidade;
+	=> As APIs são classificadas em quatro níveis de aderência ao REST;
+	=> A maturidade é baseada em: Recursos/URI, Verbos HTTP e Hipermídia;
+	=> Nível 0 - Plain Old XML Swamp: Menor nível de conformidade:
+		-> Protocolo HTTP usado apenas para transportar dados;
+		-> Expõe apenas um único endpoint para todo o aplicativo;
+		-> Os Verbos HTTP não são utilizados corretamente;
+		-> Não existe retorno com código de status.
+	=> Nível 1 - URI (Uniform Resource Identifier)
+		-> Recursos baseados em múltiplas URI;
+		-> Os Verbos HTTP ainda são usados incorretamente;
+		-> O corpo da requisição usado para carregar as informações.
+	=> Nível 2 - Utilização dos Verbos HTTP com Resource URI:
+		-> Os códigos de status são usados de forma correta;
+		-> O corpo da requisição não carrega metadados.
+	=> HATEOAS (HyperText As The Engine Of Application State):
+		-> Diz o que é possível fazer após uma requisição no recurso.
