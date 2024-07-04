@@ -285,3 +285,32 @@ Seção #1: Conceitos Gerais
 		-> O corpo da requisição não carrega metadados.
 	=> HATEOAS (HyperText As The Engine Of Application State):
 		-> Diz o que é possível fazer após uma requisição no recurso.
+
+1.10. Injeção de Dependência
+	=> Técnica para tornar uma classe independente de suas dependências;
+	=> É um padrão para implementar a Inversão de Controle (IoC);
+	=> Seu objetivo é a redução do acoplamento entre os objetos;
+	=> Sua aplicação faz um objeto fornecer as dependências de outro;
+	=> Exemplo ilustrando uma classe Cliente com forte acomplamento:
+		-> Ela depende da classe Pedido e precisa saber como criá-la;
+		-> Dependendo da classe Pedido, acaba dependendo de suas dependências;
+		-> Qualquer mudança na classe Pedido afeta a classe Cliente;
+		-> Isso viola o Princípio SOLID da Responsabilidade Unica:
+			- Ela não só tem que obter os pedidos, mas criara  sua instância.
+		-> Testes unitários em classes muito acopladas são problemáticos.
+	=> Deve-se retirar de uma classe a responsabilidade de criar outras;
+	=> O controle na classe dependente é invertido para esta retirada;
+	=> Outra classe torna-se responsável por criar esta instância;
+	=> A criação de novas instâncias sempre deve ser delegada;
+	=> Através de uma abstração, a criação das instâncias é feita;
+	=> As demais classes passam a depender apenas desta instância; 
+	=> O Princípio da Inversão de controle prega as seguintes premissas:
+		-> Delegar a tarefa de criação de um objeto a uma outra entidade;
+		-> Reduzir o acoplamento e minimizar as dependências entre objetos.
+	=> Uma classe não deve depender da implementação de outra classe;
+	=> Em vez disso, uma abstração deve ser criada para esta classe;
+	=> As classes deverão depender apenas desta abstração criada;
+	=> Esta abstração poderá ser outra classe ou interface;
+	=> Na plataforma .NET Core possui um Container DI nativo:
+		-> Ele fornece a instância da classe através das interfaces;
+		-> Basta configurar a classe neste container para tanto.
