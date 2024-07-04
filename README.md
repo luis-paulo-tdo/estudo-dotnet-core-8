@@ -286,7 +286,7 @@ Seção #1: Conceitos Gerais
 	=> HATEOAS (HyperText As The Engine Of Application State):
 		-> Diz o que é possível fazer após uma requisição no recurso.
 
-1.10. Injeção de Dependência
+1.10. Injeção de Dependência - Introdução
 	=> Técnica para tornar uma classe independente de suas dependências;
 	=> É um padrão para implementar a Inversão de Controle (IoC);
 	=> Seu objetivo é a redução do acoplamento entre os objetos;
@@ -314,3 +314,28 @@ Seção #1: Conceitos Gerais
 	=> Na plataforma .NET Core possui um Container DI nativo:
 		-> Ele fornece a instância da classe através das interfaces;
 		-> Basta configurar a classe neste container para tanto.
+		
+1.11. Injeção de Dependência - Tempo de Vida
+	=> Inversão de Controle é um princípio que promove o baixo acoplamento;
+	=> Inversão de Dependência é um princípio para minimizar dependências;
+	=> Injeção de Dependência é um padrão de projeto que aplica a IoC;
+	=> IoC Container é um framework que gerencia as injeções de dependências;
+	=> Os princípios fornecem diretrizes para o objetivo, sem detalhes;
+	=> Os padrões fornecem soluções de baixo nível para as implementações;
+	=> Os frameworks realizam a solução dentro da implementação do projeto;
+	=> A plataforma .NET Core possui um framework de Injeção de Dependência;
+		-> A interface IServiceCollection registra as dependências usadas;
+	=> Existe, porém, outros containeres que não sejam nativos da plataforma;
+	=> Quem usa Injeção de Dependência precisa conhecer sobre tempo de vida;
+	=> Cada serviço injetado tem o seu próprio tempo de vida na aplicação;
+	=> Este tempo de vida controla a existência da dependência no container;
+		-> Este tempo de vida gera impactos no desempenho da aplicação.
+	=> O tempo de vida dos serviços pode ser registrado em três segmentos:
+		-> Transient: Os serviços criados cada vez que são solicitados:
+			- Toda vez que for injetado, sua instância será diferente;
+			- Ideal para serviços mais leves e que não tenham estado.
+		-> Scoped: Os serviços são criados para cada request solicitada:
+			- Indicado para aplicações Web. A instância muda a cada request;
+			- Bom quando a instância é usada em muitos lugares na request;
+			- A mesma alocação de memória será usada para esta instância.
+		-> Singleton: Duram o mesmo tempo de vida útil de toda aplicação.
