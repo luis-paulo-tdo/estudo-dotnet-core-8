@@ -339,3 +339,24 @@ Seção #1: Conceitos Gerais
 			- Bom quando a instância é usada em muitos lugares na request;
 			- A mesma alocação de memória será usada para esta instância.
 		-> Singleton: Duram o mesmo tempo de vida útil de toda aplicação.
+
+-----
+
+Seção #2: Ambiente e Recursos
+
+2.1. Apresentação
+	=> Atualizações da plataforma .NET Core
+		-> O curso foi dado com .Net Core 3.1;
+		-> O .NET 5 unificou a plataforma .NET;
+		-> Depois vieram o .NET 6, .NET 7 e .NET 8.
+	=> Houveram alterações nos templates e na estrutura;
+	=> Mas não houve grandes alterações na forma de construir;
+	=> A partir do .NET 5, uma nova versão passou a ser anual;
+	=> O curso terá uma segmentação com base nos tópicos abaixo:
+		-> .NET 8, a nova atualização da plataforma unificada;
+		-> ASP .NET Core 8 para a criação de Web APIs;
+		-> Instalação das IDEs Visual Studio 2022 e Code;
+		-> Instalação das ferramentas MySQL e do MySQL Workbench;
+		-> Apresentação de template para montar Web APIs .NET;
+		-> Conceito e criação das Minimals APIs em .NET Core;
+		-> Migração de versões anteriores para a versão .NET 8.
