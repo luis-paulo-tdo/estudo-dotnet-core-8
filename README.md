@@ -360,3 +360,18 @@ Seção #2: Ambiente e Recursos
 		-> Apresentação de template para montar Web APIs .NET;
 		-> Conceito e criação das Minimals APIs em .NET Core;
 		-> Migração de versões anteriores para a versão .NET 8.
+
+2.2. Ambiente
+	=> Para sistemas Windows:
+		-> A plataforma .NET 8;
+		-> Editor VS 2022 Community;
+		-> MySQL como banco de dados;
+		-> MySQL Workbench para gerenciamento.
+	=> Ambiente do .NET 8 instalado:
+		-> Suporte ao .NET 8;
+		-> Suporte ao EF Core 7;
+		-> Suporte à linguagem C#;
+		-> Framework Web MVC e APIs;
+		-> Swagger de documentação;
+		-> Postman para consultas.
+
