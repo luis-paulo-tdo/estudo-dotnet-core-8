@@ -375,3 +375,7 @@ Seção #2: Ambiente e Recursos
 		-> Swagger de documentação;
 		-> Postman para consultas.
 
+2.3. NET 8 - Instalação
+	=> A SDK do .NET 8 encontra-se no site da Microsoft;
+	=> Ela dá suporte ao C#, ao ASP.NET Core e ao EF Core;
+
