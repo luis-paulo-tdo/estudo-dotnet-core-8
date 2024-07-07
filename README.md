@@ -387,3 +387,15 @@ Seção #2: Ambiente e Recursos
 	=> Primeiro é baixado o instalador e através dele é feita a instalação;
 	=> Selecionar a carga de trabalho ASP.NET e Desenvolvimento Web.
 
+2.5. VS Code - Instalação
+	=> Versão alternativa do editor Visual Studio Community;
+	=> Mais leve, flexível e personalizável através de plugins;
+	=> Multiplataforma: Funciona no Windows, MacOS e Linux;
+	=> Oferece os mesmos recursos e templates do Community;
+	=> O download é feito no site do Visual Studio Code;
+	=> Ao instalar, é preciso obter o C# Dev Kit Extension:
+		-> Fornece suporte à linguagem de programação C#;
+		-> Contém as bases do Visual Studio para as soluções;
+		-> Gerenciamento de testes, machine learning, etc.
+		-> A extensão Intellicode para desenvolver com IA.
+
