@@ -379,3 +379,11 @@ Seção #2: Ambiente e Recursos
 	=> A SDK do .NET 8 encontra-se no site da Microsoft;
 	=> Ela dá suporte ao C#, ao ASP.NET Core e ao EF Core;
 
+2.4. Visual Studio - Instalação
+	=> O Visual Studio Community 2022 é uma versão gratuíta do Visual Studio;
+	=> Feita para estudantes e desenvolvedores individuais e de código aberto;
+	=> O download é feito no site da Microsoft, que tem muito material de estudo;
+		-> Uso da IDE para machine learning, ciências de dados, jogos, etc.
+	=> Primeiro é baixado o instalador e através dele é feita a instalação;
+	=> Selecionar a carga de trabalho ASP.NET e Desenvolvimento Web.
+
