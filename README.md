@@ -399,3 +399,14 @@ Seção #2: Ambiente e Recursos
 		-> Gerenciamento de testes, machine learning, etc.
 		-> A extensão Intellicode para desenvolver com IA.
 
+2.6. MySQL - Instalação
+	=> MySQL Community é a versão gratuíta e de código aberto;
+	=> Multiplataforma, rodando em Windows, Linux e MacOS;
+	=> O instalador do MySQL instala os seguintes recursos:
+		-> O próprio servidor de banco de dados do MySQL;
+		-> Os conectores necessários para a plataforma .NET;
+		-> MySQL Workebench para administrar os bancos de dados;
+		-> MySQL Notifier para monitorar as instâncias MySQL;
+		-> Ferramentas para Excel e para o Visual Studio;
+		-> Exemplos de bancos de dados usando o MySQL;
+		-> Todas as documentações que integram o MySQL.
