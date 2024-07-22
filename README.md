@@ -410,3 +410,24 @@ Seção #2: Ambiente e Recursos
 		-> Ferramentas para Excel e para o Visual Studio;
 		-> Exemplos de bancos de dados usando o MySQL;
 		-> Todas as documentações que integram o MySQL.
+
+2.7. Criando a primeira Web API
+	=> No Visual Studio, há um template padrão ASP.NET Core Web API:
+		-> Ele permite que sejam criadas Web APIs com Controllers;
+		-> Ele permite a criação de Web APIs com Minimal APIs.
+	=> Os templates padrão do .NET 8 não usam mais a classe Startup;
+	=> A configuração dos serviços e request pipeline é no Program;
+	=> A classe Program faz o uso dos seguintes recursos do C#:
+		-> Top Level Statements, que não faz uso do método Main;
+		-> Global Usings, que usa a diretiva using implicitamente.
+	=> O Visual Studio cria a seguinte estrutura de projeto Web API:
+		-> Connected Services: Qualquer serviço que esteja conectado;
+		-> Dependencies: Bibliotecas e pacotes que rodam o projeto;
+			- Analyzers: Ajudam na melhoria da qualidade do projeto;
+			- Frameworks: Estruturas para desenvolver em .NET;
+			- Pacotes: Acrescentam funcionalidades adicionais.
+		-> Properties: Configurações do ambiente de execução;
+		-> Controllers: Detem os controladores da Web API;
+		-> appsettings.json: Tem configurações específicas;
+		-> Program.cs: Ponto de partida do projeto.
+		
