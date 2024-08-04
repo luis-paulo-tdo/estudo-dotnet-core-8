@@ -431,3 +431,40 @@ Seção #2: Ambiente e Recursos
 		-> appsettings.json: Tem configurações específicas;
 		-> Program.cs: Ponto de partida do projeto.
 		
+2.8. Primeira Web API - Estrutura
+	=> O arquivo de projeto tem a extensão .csproj:
+		-> Define estrutura, configurações e dependências:
+			- Suporte a nullables e implicit usings;
+			- Suporte à internacionalização e globalização.
+		-> Contém informações de tipo, nome e linguagem;
+		-> Define a SDK que será usada para a compilação.
+	=> A pasta /bin e /obj são usadas para os compilados;
+	=> A pasta /Controller serve aos Controllers da aplicação;
+	=> A pasta /Properties está o launchSettings.json:
+		-> Define como a aplicação será lançado e executado;
+		-> Define quais configurações serão usadas no lançamento;
+		-> Define as configurações do IIS caso o projeto o use:
+			- URL, porta, habilitação de autenticação do Windows.
+		-> Contém por padrão três perfis de lançamento da aplicação:
+			- Uso do HTTP, uso do HTTPS e uso do IIS Express;
+			- Cada uma define o comando usado no seus lançamentos;
+			- Define se o console exibirá mensagens de execução;
+			- Define se o navegador será aberto e a URL acessada;
+			- Indica qual URL será usada para acessar a aplicação;
+			- Indica as variáveis de ambiente que serão usadas;
+			- As variáveis definem se o ambiente é dev ou prod;
+			- O HTTPS define duas URLs, uma HTTP e outra HTTPS;
+			- IIS Express define a execução em cima do IIS;
+			- O servidor padrão embutido chama-se Kestrel.
+	=> É possível escolher o navegador que inicia o projeto;
+	=> O appsettings.json armazena configurações do aplicativo:
+		-> Ajuda a separar configurações do código-fonte;
+		-> Favorece configurações dinâmicas sem recompilação.
+	=> O Program.cs também é importante para a inicialização:
+		-> No .NET 8, a classe Startup.cs não é criada;
+		-> Dentro dela, o aplicativo Web é construído;
+		-> Os serviços usados são configurados;
+		-> A instância do aplicativo é iniciada;
+		-> Configura serviços para modos de desenvolvimento;
+		-> Configura o pipeline com HTTPS, Autenticação, etc.
+	
