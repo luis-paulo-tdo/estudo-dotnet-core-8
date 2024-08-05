@@ -467,4 +467,15 @@ Seção #2: Ambiente e Recursos
 		-> A instância do aplicativo é iniciada;
 		-> Configura serviços para modos de desenvolvimento;
 		-> Configura o pipeline com HTTPS, Autenticação, etc.
-	
+		
+2.9. Primeira Web API - Controlador
+	=> Controller é uma classe responsável por lidar com requisições HTTP;
+	=> Intermedia entre as requisições feitas por clientes e a lógica;
+	=> Ele faz o mapeamento dos verbos HTTP para ações específicas;
+	=> Todo controlador no .NET Core tem o sufixo "Controller";
+	=> O prefixo antes de "Controller" é parte da rota base;
+	=> Todo Controller terá o atributo de Route e da ApiController;
+		-> Dá acesso a recursos que facilitam a construção das APIs;
+		-> Ajuda a distribuir e distinguir um Controlador API de MVC;
+		-> Favorece bind e validação automáticas, respostas padrão;
+		-> Favorece também a geração de documentação do sistema.
