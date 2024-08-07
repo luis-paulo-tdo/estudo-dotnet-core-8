@@ -33,7 +33,7 @@ namespace Projeto_01_MinhaApi.Controllers
         [HttpGet("Teste")]
         public string GetSaudacoes()
         {
-            return $"{DateTime.Now.ToShortDateString()} - Bem-vindo à MinhaAPI ";
+            return $"{DateTime.Now.ToShortDateString()} - Bem-vindo à MinhaAPI";
         }
     }
 }

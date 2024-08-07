@@ -479,3 +479,22 @@ Seção #2: Ambiente e Recursos
 		-> Ajuda a distribuir e distinguir um Controlador API de MVC;
 		-> Favorece bind e validação automáticas, respostas padrão;
 		-> Favorece também a geração de documentação do sistema.
+
+2.10. Criando a Primeira Minimal API
+	=> O conceito foi introduzido a partir do .NET 6;
+	=> É uma nova abordagem de APIs simples e concisas;
+	=> Visa facilitar a criação de APIs básicas;
+	=> Reduz a complexidade das configurações;
+	=> Diminui a quantidade de código desnecessário;
+	=> As APIs são criadas com poucas linhas de código;
+	=> Elimina controladores tradicionais e rotas complexas;
+	=> Os endpoints são definidos dentro do código de Program.cs;
+	=> Isto é feito com os métodos Extension MapGet, MapPost, etc.;
+	=> Estes métodos são disponibilizados pela interface IApplicationBuilder;
+	=> Cada método corresponde a um Verbo HTTP específico com uma lógica;
+	=> Ao ser criado no Visual Studio, o projeto não tem Controllers;
+	=> Todo código está concentrado dentro da classe Program;
+	=> Através dos métodos Map, as rotas são parametrizadas;
+	=> Os métodos Map recebem funções callback com a lógica;
+	=> A classe de retorno foi substituída por um record;
+	=> Record é uma classe otimizada para dados imutáveis.
