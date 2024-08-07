@@ -498,3 +498,22 @@ Seção #2: Ambiente e Recursos
 	=> Os métodos Map recebem funções callback com a lógica;
 	=> A classe de retorno foi substituída por um record;
 	=> Record é uma classe otimizada para dados imutáveis.
+	
+2.11. Criando APIs com VS Code e o .NET CLI
+	=> VS Code é uma IDE mais leve e com suporte à multi-plataforma;
+	=> É gratuíto, open source e utiliza a .NET CLI para os projetos;
+	=> .NET CLI permite criar, construir, executar e publicar aplicativos;
+	=> Todos os comandos estão bem documentados no site da Microsoft;
+	=> Todos os comandos do .NET CLI iniciam com a palavra 'dotnet';
+	=> O .NET CLI é usado em uma ferramenta de prompt, como o 'cmd';
+	=> Ao rodar o comando 'dotnet new', são dadas sugestões de templates;
+	=> Ao rodar o 'dotnet new list', uma lista mais completa é exibida;
+	=> Ao criar o projeto, basta abrir o VS Code no diretório dele;
+	=> O VS Code tem um terminal próprio que permite executar comandos;
+	=> Através do 'dotnew new -minimal', é possível criar Minimal APIs;
+	=> As estruturas dos projetos são as mesmas do Visual Studio 2022;
+	=> É possível criar um projeto Web API dentro do próprio VS Code:
+		-> Pressionar Ctrl + Shift + P e selecionar '.NET New Project';
+		-> Selecionar uma pasta onde o projeto deverá ser criado;
+		-> Escolher um nome para o projeto e aguardar a criação.
+	=> Para criar projetos como solução, baixar o Dev Kit C#.

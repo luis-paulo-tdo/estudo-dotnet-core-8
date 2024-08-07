@@ -1,0 +1,6 @@
+@Projeto_03_DemoApiVsCode_HostAddress = http://localhost:5118
+
+GET {{Projeto_03_DemoApiVsCode_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
