@@ -10,7 +10,7 @@ Curso lecionado pelo professor Jose Carlos Macoratti que apresenta conceitos ess
 - As Redes fizeram com que um dispositivo fosse acessado por muitos:
  - O acesso deste dispositivo era concedido por APIs mais uniformes.
 - A Internet originou os Web Services: APIs fornecidas via Internet:
-  - Elas integraram sistemas implementados em diversas tecnologias.
+ - Elas integraram sistemas implementados em diversas tecnologias.
 - REST API é um Web Service mais ágil e flexível em construção e uso:
  - Usam Protocolo HTTP, aquele que é mais usado na Internet atualmente.
 - Web APIs são APIs na Internet acessíveis por muitas tecnologias:
