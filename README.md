@@ -10,70 +10,70 @@ Curso lecionado pelo professor Jose Carlos Macoratti que apresenta conceitos ess
 - As Redes fizeram com que um dispositivo fosse acessado por muitos:
 	- O acesso deste dispositivo era concedido por APIs mais uniformes.
 - A Internet originou os Web Services: APIs fornecidas via Internet:
- - Elas integraram sistemas implementados em diversas tecnologias.
+	- Elas integraram sistemas implementados em diversas tecnologias.
 - REST API é um Web Service mais ágil e flexível em construção e uso:
- - Usam Protocolo HTTP, aquele que é mais usado na Internet atualmente.
+	- Usam Protocolo HTTP, aquele que é mais usado na Internet atualmente.
 - Web APIs são APIs na Internet acessíveis por muitas tecnologias:
- - Podem usar o Protocolo SOAP ou seguir a arquitetura REST.
+	- Podem usar o Protocolo SOAP ou seguir a arquitetura REST.
 - API RESTful é uma Web API que segue os princípios do REST.
 - As Web APIs .Net Core são as criadas com o framework da Microsoft.
- - O framework favorece a construção e execução de APIs RESTful.
- - É feita a utilização estensa do Protocolo de comuniação HTTP.
- - Provê muitas outras funcionalidades como depuração e portabilidade.
+	- O framework favorece a construção e execução de APIs RESTful.
+	- É feita a utilização estensa do Protocolo de comuniação HTTP.
+	- Provê muitas outras funcionalidades como depuração e portabilidade.
 
 ### 1.2. Conceitos: API, Web Services e Web API
 - API: Sigla para Application Programming Interface
- - Conjunto de rotinas e padrões estabelecidos.
- - São documentados para uso de outras aplicações.
- - Através delas, não é necessário conhecer a implementação.
- - O seu uso apresenta uma série de vantagens no desenvolvimento:
-   1. Permitem a integração de sistemas através da padronização.
-   2. Facilitam o intercâmbio de informações com a integração.
-   3. Oferecem maior segurança dos dados via autenticação.
-   4. Permitem fazer controle de acessos via autorização.
-   5. Fáceis de implementar e usar por conta da padronização.
- - Eram usadas para integrar aplicações na mesma máquina.
- - E depois usadas para integrar aplicações na mesma rede.
- - Com a Internet, são usadas para integrar aplicações globalmente.
- - As APIs podem ser ter uma classificação de dois tipos:
-   1. Públicas: De acesso geral (Facebook, PayPal, NasaAPI).
-   2. Privadas: Escopo de acesso restrito. Usadas pela aplicação.
+	- Conjunto de rotinas e padrões estabelecidos.
+	- São documentados para uso de outras aplicações.
+	- Através delas, não é necessário conhecer a implementação.
+	- O seu uso apresenta uma série de vantagens no desenvolvimento:
+		1. Permitem a integração de sistemas através da padronização.
+		2. Facilitam o intercâmbio de informações com a integração.
+		3. Oferecem maior segurança dos dados via autenticação.
+		4. Permitem fazer controle de acessos via autorização.
+		5. Fáceis de implementar e usar por conta da padronização.
+	- Eram usadas para integrar aplicações na mesma máquina.
+	- E depois usadas para integrar aplicações na mesma rede.
+	- Com a Internet, são usadas para integrar aplicações globalmente.
+	- As APIs podem ser ter uma classificação de dois tipos:
+		1. Públicas: De acesso geral (Facebook, PayPal, NasaAPI).
+		2. Privadas: Escopo de acesso restrito. Usadas pela aplicação.
 - Web Services: A popularização das APIs dentro da Internet:
-  - Conjunto de métodos invocados por outras aplicações Web.
-  - Solução utilizada para integrar aplicações a nível global.
-  - Foi a forma de popularizar APIs com foco na Internet.
-  - Apresenta as principais características a seguir:
-   1. São apoiadas no código XML e no Protocolo SOAP.
-   2. É usada para permitir a integração de sistemas.
-   3. Sua abordagem permite a reutilização de código.
-   4. Seu desenvolvimento tem uma redução de tempo.
-   5. Apresentam maior segurança que o uso das APIs.
+	- Conjunto de métodos invocados por outras aplicações Web.
+	- Solução utilizada para integrar aplicações a nível global.
+	- Foi a forma de popularizar APIs com foco na Internet.
+	- Apresenta as principais características a seguir:
+		1. São apoiadas no código XML e no Protocolo SOAP.
+		2. É usada para permitir a integração de sistemas.
+		3. Sua abordagem permite a reutilização de código.
+		4. Seu desenvolvimento tem uma redução de tempo.
+		5. Apresentam maior segurança que o uso das APIs.
 - Análise comparativa entre o uso de APIs x Web Service:
- - As APIs não são necessariamente feitas como Web Services:
-  - Elas podem fazer uso de qualquer meio de comunicação.
-  - Geralmente as APIs possuem seu código aberto.
-  - Podem ser utilizadas de qualquer lugar e sistema.
-  - Realizam todas as operações de um Web Service.
-  - Podem ter arquitetura leve para bandas curtas.
-  - Não necessita de uma rede para funcionar.
-  - Tendem a serem abertas para qualquer um.
- - Web Services sempre são tratadas como APIs:
-  - Usam três comunicações: SOAP, REST e XML-RPC.
-  - São autocontidas e autodescritivas em suas funções.
-  - São publicadas, localizadas e invocadas via Web.
-  - Não realizam todas as operações que uma API realiza.
-  - Requerem um Protocolo SOAP para fazer troca de dados.
-  - Não têm arquitetura leve e funcionam apenas em rede.
-  - Tendem a oferecer funções para usuários específicos.
+	- As APIs não são necessariamente feitas como Web Services:
+		- Elas podem fazer uso de qualquer meio de comunicação.
+		- Geralmente as APIs possuem seu código aberto.
+		- Podem ser utilizadas de qualquer lugar e sistema.
+		- Realizam todas as operações de um Web Service.
+		- Podem ter arquitetura leve para bandas curtas.
+		- Não necessita de uma rede para funcionar.
+		- Tendem a serem abertas para qualquer um.
+	- Web Services sempre são tratadas como APIs:
+		- Usam três comunicações: SOAP, REST e XML-RPC.
+		- São autocontidas e autodescritivas em suas funções.
+		- São publicadas, localizadas e invocadas via Web.
+		- Não realizam todas as operações que uma API realiza.
+		- Requerem um Protocolo SOAP para fazer troca de dados.
+		- Não têm arquitetura leve e funcionam apenas em rede.
+		- Tendem a oferecer funções para usuários específicos.
 - Web API: A evolução dos Web Services com novas possibilidades:
- - Conjunto de serviços na Web para integrar diversos clientes.
- - Características que compõem a arquitetura das Web APIs:
-  1. Podem ser desenvolvidas usando diversas tecnologias.
-  2. Respondem em formatos específicos: XML, JSON e TXT.
-  3. Podem ser acessadas através do uso do Protocolo HTTP.
-  4. Podem responder com diversos conteúdos multimídia.
- - Exemplos: Google APIs, Instagram, Twitter, YouTube.
- - Podem ser implementadas com SOAP ou seguindo o REST.
+	- Conjunto de serviços na Web para integrar diversos clientes.
+	- Características que compõem a arquitetura das Web APIs:
+		1. Podem ser desenvolvidas usando diversas tecnologias.
+		2. Respondem em formatos específicos: XML, JSON e TXT.
+		3. Podem ser acessadas através do uso do Protocolo HTTP.
+		4. Podem responder com diversos conteúdos multimídia.
+	- Exemplos: Google APIs, Instagram, Twitter, YouTube.
+	- Podem ser implementadas com SOAP ou seguindo o REST.
 		
 ### 1.3. Conceitos: SOAP, REST, ASP.NET Core Web API
 - SOAP: Simple Object Access Protocol
