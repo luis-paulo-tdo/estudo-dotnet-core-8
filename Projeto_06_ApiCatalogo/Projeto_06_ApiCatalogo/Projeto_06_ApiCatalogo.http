@@ -1,0 +1,6 @@
+@Projeto_06_ApiCatalogo_HostAddress = http://localhost:5022
+
+GET {{Projeto_06_ApiCatalogo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
