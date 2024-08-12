@@ -633,3 +633,57 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 		2. Service: Criação de Classes de acesso a Serviços.
 		3. Application Core: Domínios, Serviços e Repositórios.
 		4. Data Access: Entity Framework Core e MySQL.
+
+### 3.3. Criando o Projeto Web API
+- O objetivo será criar uma Web API para um catálogo de produtos/categorias.
+- O catálogo poderá atender a uma rede de lojas, supermercados ou consumidores.
+- Haverá um serviço RESTful para prover acesso e gerenciamento dos catálogos.
+- A API terá endpoints de operações CRUD e consultas aos produtos e categorias.
+- Estas APIs irão utilizar os Verbos HTTP e retornarão códigos de status.
+- Para iniciar a criação desta Web API, o projeto ApiCatalogo será criado:
+	- A IDE utilizada para o projeto será o Visual Studio 2022 Community.
+	- O projeto terá habilitada a opção Open API e usará os Controllers.
+	- Será criada a modelagem das entidades Produto e Categoria.
+	- O projeto será configurado para usar o Entity Framework Core.
+	- O banco de dados utilizado será o MySQL com o MySQL Workbench.
+	- Será definida uma classe de Contexto AppDbContex para o EF Core.
+	- Será definido o mapeamento das entidades para as tabelas com DbSet<T>.
+	- O Contexto será registrado como um serviço na classe Program.cs
+	- A string de conexão com o MySQL será definida no appsettings.json
+	- O Pomelo será usado como provedor do banco e da string de conexão.
+	- Será aplicado o Migrations para criar o banco de dados e as tabelas.
+	- Serão criados os controladores ProdutosController e CategoriasController.
+	- Serão definidos os endpoints ou métodos Action para realizar os CRUDs.
+- Quando estiver pronta, a Web API atenderá solicitações de vários clientes.
+- A Web API se comunicará com o MySQL via EF Core para obter os dados.
+- Ao habilitar o Open API, o projeto já habilitará as APIs no Swagger.
+- O projeto criado tem dois perfis de execução: ApiCatalogo e IIS Express:
+	- O ApiCatalogo usa configurações pré-definidas e roda no Kestrel.
+	- O IIS Express roda em um servidor IIS com configurações próprias.
+- No .NET 8, as configurações de serviços não são mais feitas na Startup.cs
+
+### 3.4. Criando Modelo de Domínio
+- Uma vez criado o projeto, o modelo e o controlador de exemplo são removidos.
+- É criada a pasta Model que comportará as classes Categoria.cs e Produto.cs.
+- Para definir a propriedade de chave primária, pode-se fazer de duas formas:
+	- Ou nomeando apenas de Id, ou nomeando Id prefixado pelo nome da classe.
+	- Estas duas formas de nomear são melhor entendidas pelo Entity Framework.
+- As classes criadas até o momento, só têm propriedades e não comportamentos.
+	- As classes deste tipo são comumente chamadas de Classes Anêmicas.
+- São a partir destas classes que as tabelas serão criadas com o EF Core.
+
+### 3.5. Configurando o projeto para usar o EF Core
+- A configuração usará a abordagem Code First, por meio das Classes Anêmicas.
+- Nesta abordagem o banco é gerado através do mapeamento destas Classes.
+- Ou seja, as Entidades são geradas primeiro, e depos as Tabelas referentes.
+- O mapeamento é realizado pelo EF Core com base em convenções adotadas.
+- Através das convenções, são criadas as Tabelas Categoria e Produto.
+- Este mecanismo utiliza do recurso Migrations para que seja realizado.
+- Os pacotes do EF Core e do provedor Pomelo devem ser baixados.
+- O download dos pacotes podem ser feitos via linha de comando:
+	- Deve ser acessado o diretório onde se encontra o csproj.
+- Além disso, será preciso baixar a ferramente EF Core Tools:
+	- Utilizada para a aplicação do Migrations nas Entidades.
+- A instalação dos pacotes pode ser feita também graficamente.
+	- Ele já apresenta os pacotes instalados e disponíveis.
+- Assim que os pacotes instalarem, o csproj irá atualizar.
