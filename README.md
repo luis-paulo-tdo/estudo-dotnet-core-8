@@ -687,3 +687,19 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 - A instalação dos pacotes pode ser feita também graficamente.
 	- Ele já apresenta os pacotes instalados e disponíveis.
 - Assim que os pacotes instalarem, o csproj irá atualizar.
+
+### 3.6. Criando a Classe de Contexto do EF Core
+- Ela é uma Classe que herda da Classe DbContext do EF Core.
+- É ela que definirá o mapeamento das Entidades e Tabelas.
+- DbContext representa uma sessão com o Banco de Dados.
+- Ela recebe o provedor do Banco e a string de conexão.
+- A DbContext é composta por Classes representativas DbSet<T>:
+	- Representam coleções de dados que podem ser consultadas.
+	- As entidades também são manipuladas através dela.
+	- Para cada Entidade, uma Classe DbSet é meapeada.
+	- A Classe pode ser nullable caso seja opcional.
+- A DbContext oferece diversos recursos de Banco de Dados:
+	- Acesso, persistência e comunicação com as Tabelas.
+- A AppDbContext recebe como dependência a DbContextOptions:
+	- Ela contém um conjunto de configurações do Banco de Dados.
+	- Contém também informações sobre a string de conexão de Banco.
