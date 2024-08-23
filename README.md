@@ -703,3 +703,6 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 - A AppDbContext recebe como dependência a DbContextOptions:
 	- Ela contém um conjunto de configurações do Banco de Dados.
 	- Contém também informações sobre a string de conexão de Banco.
+
+### 3.7. Registrando os Serviços no Container DI
+- É necessário incluir a string de conexão com o Banco de Dados MySQL.
