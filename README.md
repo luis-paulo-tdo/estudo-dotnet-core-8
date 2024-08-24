@@ -705,4 +705,28 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 	- Contém também informações sobre a string de conexão de Banco.
 
 ### 3.7. Registrando os Serviços no Container DI
-- É necessário incluir a string de conexão com o Banco de Dados MySQL.
+- É necessário informar a string de conexão com o Banco de Dados MySQL.
+- Esta informação será colocada no arquivo `appsettings.json` do Projeto.
+- A propriedade da string de conexão é definida por `ConnectionStrings`.
+- A string de conexão define o servidor, o schema usado, o login e senha.
+- A string de conexão permite o registro do Contexto como um Serviço.
+- Este código de configuração é incluído na Classe Program no .NET 8.
+	- Através do `builder`, é possível obter a string do `appsettings.json`.
+	- Com a string, o `builder` é usado para adicionar o Context criado.
+
+### 3.8. Definindo o Relacionamento entre as Entidades
+- Cada Categoria vai ter um valor único que é chamado de Chave Primária:
+	- Com ele, todas as Categorias são identificadas de forma única.
+- Além das informações descricionais, os Produtos também têm Chave Primária.
+	- Além da Chave Primária, os Produtos também terão Chaves Estrangeiras.
+	- A Chave Estrangeira de um Produto aponta para Chave Primária de Categoria.
+- Uma Categoria pode ter um ou mais Produtos associados a ela: Relação Um-Para-Muitos.
+- Dentro de um Banco de Dados, os Relacionamentos são definidos por Chaves Estrangeiras.
+	- Elas estabelecem um vínculo ou link que conecta uma tabela com a outra tabela.
+- Este Relacionamento deve ser expressado nas Entidades para que o EF possa entender.
+- A forma mais simples de definir este Relacionamento é por meio das convenções:
+	- A convenção do EF Core é usar as propriedades de navegação para Relacionamentos.
+	- Dentro da Classe Categoria, haverá uma Collection de Produtos indicando o Relacionamento.
+		- É uma boa prática sempre inicializar uma Collection dentro de uma Classe.
+	- Já a Classe Produto pode referenciar um único Id apontado para a Classe Categoria.
+	- Além disso, a Classe Produto pode referenciar a instância de sua Categoria.
