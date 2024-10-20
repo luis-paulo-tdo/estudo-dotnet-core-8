@@ -730,3 +730,20 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 		- É uma boa prática sempre inicializar uma Collection dentro de uma Classe.
 	- Já a Classe Produto pode referenciar um único Id apontado para a Classe Categoria.
 	- Além disso, a Classe Produto pode referenciar a instância de sua Categoria.
+
+### 3.9. Apresentando o EF Core Migrations
+- O Migrations é uma maneira de atualizar um banco de dados de forma incremental.
+- Seu objetivo principal é manter sincronia com o modelo de dados da aplicação.
+- O seu uso também é responsável por preservar os dados existentes no banco.
+- É uma forma de versionar o esquema do banco de dados sincronizado ao modelo.
+- A partir de um Modelo de Entidades, é criado um Modelo do Entity Framework.
+	- Através do Modelo EF Core, o Migrations irá criar o Banco de Dados.
+- Ao alterar as Classes de Domínio, o Migrations deverá ser executado.
+- Para realizar todo este processo de atualização, são usadas as EF Tools.
+- As EF Tools são comandos executados no cmd para realizar as seguintes operações:
+	- Criação do script que será usado para fazer as migrações necessárias.
+	- Remoção de algum script de migração que foi criado anteriormente.
+	- Geração de banco de dados e das tabelas com base no script.
+- Uma alternativa ao Migrations no cmd é o Package Manager Console.
+	- Os comandos são diferentes, mas as funções são as mesmas.
+	- É necessário baixar um pacote pelo gerenciador NuGet.
