@@ -747,3 +747,23 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 - Uma alternativa ao Migrations no cmd é o Package Manager Console.
 	- Os comandos são diferentes, mas as funções são as mesmas.
 	- É necessário baixar um pacote pelo gerenciador NuGet.
+	
+### 3.10. Aplicando os Migrations
+- É preciso ter configurada a classe Program e o arquivo appsettings para se conectar.
+- Todas as propriedades das classes são mapeadas, excetos as de navegação.
+- Usar prompt de comando ou o NuGet Package Manager para executar o Migrations.
+	- Comando: `dotnet ef migrations add <nome-da-migracao>`.
+- Quando o migrations é adicionado, dois arquivos são criados:
+	- Timestamp para registrar o tempo em que a migração foi feita.
+		- O nome da classe é o mesmo do nome da migração.
+		- É composto por um builder que especifica todas as tabelas geradas.
+		- Para cada tabela, são especificadas as propriedades e seus tipos.
+		- Alguns tipos são setados automaticamente e devem ser reconfigurados.
+		- Ajustes são fundamentais para questões de armazenamento e performance.
+		- Esta classe também define os relacionamentos e foreign keys.
+		- Também são definidas constraints, como exclusão em cascata.
+		- O método `Up()` constrói a base o `Down()` reverte o que foi feito. 
+	- Snapshot do modelo de dados no momento em que a aplicação foi criada.
+- Após fazer todas as alterações necessárias no Timestamp, é hora de criar a base.
+	- Comando: `dotnet ef database update`.
+- No MySQL, todas as tabelas são criadas incluindo as alterações feitas no Timestamp.
