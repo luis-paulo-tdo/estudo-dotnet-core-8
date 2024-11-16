@@ -767,3 +767,25 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 - Após fazer todas as alterações necessárias no Timestamp, é hora de criar a base.
 	- Comando: `dotnet ef database update`.
 - No MySQL, todas as tabelas são criadas incluindo as alterações feitas no Timestamp.
+
+### 3.11. Apresentando o Data Annotations
+- São atributos que podem ser aplicados às Classes e aos seus membros.
+- Fornecem metadados sobre como eles devem ser tratados no sistema.
+- Geralmente são usados para validações de entrada de dados.
+- Também são usados para definir como a Classe ou os membros se comportam.
+- Outros usos: Formatação de dados e geração de código.
+- Também podem ser usados para a sobrescrita de convenções do EF:
+	- Estas convenções são um conjunto de regras para tratar o schema de banco de dados.
+	- A exemplo: Strings em longtext e decimais com precisão de 65 dígitos e 30 casas decimais.
+	- Estas convenções podem ser sobrescritas para regular colunas:
+		- Tamanho, formato ou obrigatoriedade das colunas.
+- Alguns dos atributos de Data Annotation:
+	- Key: Identifica uma propriedade como chave primária de tabela.
+	- Table: Define o nome da tabela para a qual a Classe será mapeada.
+	- Column: Define a coluna para qual a propriedade será mapeada.
+	- DataType: Associa um tipo de dados adicional a uma propriedade.
+	- ForeignKey: Especifica que a propriedade é usada como uma chave estrangeira.
+	- NotMapped: Exclui a propriedade do mapeamento.
+	- StringLength: Define o tamanho mínimo e máximo permitido para a string.
+	- Required: Especifica que o valor do campo é obrigatório: NOT NULL.
+- O atributo ErrorMessage retorna uma mensagem de erro para as validações.
