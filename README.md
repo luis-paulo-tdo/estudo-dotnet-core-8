@@ -789,3 +789,21 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 	- StringLength: Define o tamanho mínimo e máximo permitido para a string.
 	- Required: Especifica que o valor do campo é obrigatório: NOT NULL.
 - O atributo ErrorMessage retorna uma mensagem de erro para as validações.
+
+### 3.12. Aplicando o Data Annotations
+- Primeiro, foi aplicada a annotation 'Table' às Classes.
+- É aplicada a annotation 'Key' para o campo de chave primária.
+- É aplicada a annotation 'Required' para os campos obrigatórios.
+- É aplicada a 'StringLength' para especificar o tamanho dos campos.
+- A annotation 'Column' é aplicada para especificar os decimais.
+- Assim que as alterações são feitas, um novo comando é rodado:
+	- 'dotnet ef migrations add AjusteTabelas'.
+- Com isso, são feitas as atualizações especificadas pelas annotations:
+	- As tabelas passam a ser configuradas pelo que está no código.
+- Deve-se ter cuidado com a perda de dados ao diminuir os tamanhos dos tipos.
+- O comando gera um novo arquivo migrations mostrando as alterações.
+- Para aplicar as migrações geradas, um novo comando é rodado:
+	- 'dotnet ef database update'.
+- Agora é possível ver no banco de dados as alterações realizadas.
+- Uma desvantagem da Data Annotations é a poluição do domínio.
+- Há uma forma mais elegante de fazer isso com a Fluent API.
