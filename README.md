@@ -807,3 +807,18 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 - Agora é possível ver no banco de dados as alterações realizadas.
 - Uma desvantagem da Data Annotations é a poluição do domínio.
 - Há uma forma mais elegante de fazer isso com a Fluent API.
+
+### 3.13. Populando as Tabelas com Dados Iniciais - Conceitos
+- As tabelas criadas pelo Migrations inicialmente vêm vazias.
+- É possível fazer isto usando diversas abordagens:
+	- Incluir manualmente usando a instrução SQL 'INSERT INTO'.
+	- Usar o método 'OnModelCreating' no arquivo de Contexto:
+		- O código é definido usando a propriedade HasData para preencher as tabelas.
+	- Criar método estático e definir código de inclusão:
+		- O código utilizará o método 'AddRange' do Entity Framework Core.
+	- Criar uma migração usando o Migrations usando os métodos 'Up()' e 'Down()':
+		- Nestes métodos, são definidas as instruções 'INSERT INTO' para a inserção.
+		- Comando de criação: 'dotnet ef migrations add PopularCategorias'.
+		- Definir SQL de 'INSERT' no método 'Up()' para incluir dados.
+		- Definir SQL de 'DELETE' no método 'Down()' para reverter a migração.
+		- Aplicar migração: 'dotnet ef database update'.
