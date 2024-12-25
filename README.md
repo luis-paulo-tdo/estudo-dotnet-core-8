@@ -822,3 +822,13 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 		- Definir SQL de 'INSERT' no método 'Up()' para incluir dados.
 		- Definir SQL de 'DELETE' no método 'Down()' para reverter a migração.
 		- Aplicar migração: 'dotnet ef database update'.
+
+### 3.14. Populando a Tabela Categorias
+- Primeiro, é criada uma migração inicial com os métodos 'Up()' e 'Down()'.
+	- Comando: 'dotnet ef migrations add PopulaCategorias'
+- Os métodos ainda estão vazios e precisam receber alguma implementação.
+- Os dois métodos recebem um MigrationBuilder como parâmetro.
+- Através deste MigrationBuilder, são executados os métodos SQL.
+- No método 'Up()' são executadas as instruções para criar a migração.
+- No método 'Down()' são executadas as instruções para reverter a migração.
+- Após as modificações dos métodos, a migração é aplicada pelo comando update.
