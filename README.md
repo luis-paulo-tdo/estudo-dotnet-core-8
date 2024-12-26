@@ -840,3 +840,30 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 - No caso dos Produtos, eles possuem um vínculo com a Tabela Categoria:
 	- Deve-se tomar cuidado com os IDs que serão inseridos.
 - Uma vez alterado o arquivo gerado, a atualização pode ser rodada via comando.
+
+### 3.15. Criando os Controllers
+- O .NET 8 dá suporte tanto para a criação de Controllers quanto para Minimal APIs.
+- Os Controllers são armazenados na pasta Controllers, criada na raíz do projeto.
+- É o cérebro de uma API: Recebe e processa as requisições que são recebidas.
+- Dentro do projeto, as Controllers são classes que derivam de ControllerBase.
+	- Ela fornece métodos e recursos muito úteis para tratar requisições HTTP.
+		- OK(), BadRequest(), NotFound(), CreatedAtAction(), PhysicalFile().
+- A nomenclatura é feita pelo nome do controlador e o sufixo Controller:
+	- Exemplo: CategoriasController e ProdutosController.
+- A classe geralmente é decorada pelo atributo '[ApiController]':
+	- Este Decorator permite que o Controller acesse o seguintes recursos:
+		- Requisito de roteamento de atributo.
+		- Respostas HTTP 400 automáticas.
+		- Inferência de parâmetro de origem de associação.
+		- Inferência de solicitação de dados de várias partes/formulário.
+		- Uso de Problem Details para códigos de status erro.
+- A classe também costuma ser decorada pelo atributo '[Route]':
+	- Ela especifica um padrão de URL para acessar um Controller ou Action.
+- A classe Program deve ser configurada para permitir o uso dos Controllers:
+	- Habilitar o serviço dos Controllers no DI nativo:
+		- Instrução: 'builder.Services.AdddControllers()'.
+	- O .NET deve ser informado como os Controllers devem ser mapeados:
+		- Instrução: 'app.MapControllers()'.
+		- Ele incluirá os endpoints dos métodos Action do Controller.
+- Cada método da Controller deve ter uma rota e responder a um método HTTP:
+	- O nome junto com o método deve ser exclusivo para cada método.
