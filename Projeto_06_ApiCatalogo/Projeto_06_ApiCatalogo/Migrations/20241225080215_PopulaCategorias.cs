@@ -10,9 +10,9 @@ namespace Projeto_06_ApiCatalogo.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder mb)
         {
-            mb.Sql("INSERT INTO Categorias(Nome, ImagemUrl) VALUES ('Bebidas', 'bebidas.jpg'");
-            mb.Sql("INSERT INTO Categorias(Nome, ImagemUrl) VALUES ('Lanches', 'lanches.jpg'");
-            mb.Sql("INSERT INTO Categorias(Nome, ImagemUrl) VALUES ('Sobremesas', 'sobremesas.jpg'");
+            mb.Sql("INSERT INTO Categorias(Nome, ImageUrl) VALUES ('Bebidas', 'bebidas.jpg')");
+            mb.Sql("INSERT INTO Categorias(Nome, ImageUrl) VALUES ('Lanches', 'lanches.jpg')");
+            mb.Sql("INSERT INTO Categorias(Nome, ImageUrl) VALUES ('Sobremesas', 'sobremesas.jpg')");
         }
 
         /// <inheritdoc />

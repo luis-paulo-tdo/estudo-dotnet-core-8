@@ -832,3 +832,11 @@ Partimos agora para a criação de Web APIs com a IDE Visual Studio Community 20
 - No método 'Up()' são executadas as instruções para criar a migração.
 - No método 'Down()' são executadas as instruções para reverter a migração.
 - Após as modificações dos métodos, a migração é aplicada pelo comando update.
+
+### 3.15. Populando a Tabela Produtos
+- Uma nova migração é criada via comando, gerando o arquivo da alteração.
+- Dentro do arquivo, as instruções INSERT são adicionadas ao método 'Up()'.
+- No método 'Down()', é adicionada a instrução para desfazer o 'Up()'.
+- No caso dos Produtos, eles possuem um vínculo com a Tabela Categoria:
+	- Deve-se tomar cuidado com os IDs que serão inseridos.
+- Uma vez alterado o arquivo gerado, a atualização pode ser rodada via comando.
